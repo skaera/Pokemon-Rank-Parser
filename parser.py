@@ -79,6 +79,12 @@ def get_trainer_rank(match, index):
 # get_pokemon_rank - 포켓몬 순위 정보 가져오기
 #
 # match -> 시즌 정보로부터 가져온 매치 정보
+# 10시즌 이후의 매칭을 가져올 때 ( 100{}{} -> 10{}{})
+#   _URL = URL_POKEMON.format(
+#        mid = "10{}{}".format(match['season'], match['rule'] + 1),
+#        rst = match['rst'],
+#        ts = match['ts2'],
+#    )
 
 def get_pokemon_rank(match):
     _URL = URL_POKEMON.format(
